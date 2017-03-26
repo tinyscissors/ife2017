@@ -1,0 +1,141 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*header*/
+header {
+	position: relative;
+
+	height: 60px;
+
+	background-color: #333;
+}
+
+header div img {
+	padding-left: 20px;
+	height: 58px;
+}
+
+header div ul {
+	position: absolute;/*相对于header定位*/
+	top: 0;
+	right: 10px;
+}
+
+header div ul li{
+	display: block;
+	float: left;/*向左浮动布局*/
+
+	padding: 20px 10px;
+	width: 60px;
+
+	text-align: center;/*水平居中对齐，默认为left*/
+}
+
+header div ul li a {
+	font-size: 12px;
+	text-decoration: none;
+
+	color: white;
+}
+
+header div ul li:hover {
+	border-bottom: 1px solid red;
+	background-color: #474747;
+	border-radius: 3px;
+}
+
+/*container*/
+.container {
+	overflow: auto;/*如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。*/
+
+	box-sizing: border-box;/*内边距和边框都将在已设定的宽度和高度内进行绘制。*/
+	margin: 20px;
+	border: 1px solid #999;
+	padding: 20px 160px 20px 240px;
+
+	background-color: #eee;
+}
+
+article, aside {
+	border: 1px solid #999;
+
+	background-color: #fff;
+}
+
+.center {
+	float:  left;
+
+	position: relative;/*相对其正常位置进行定位*/
+
+	box-sizing: border-box;
+	width: 100%;
+	padding: 20px;
+}
+
+.center p {
+	line-height: 20px;
+	text-indent: 2em;
+}
+
+.left {
+	float: left;
+
+	position: relative;
+	left: -220px;/*调整位置*/
+
+	box-sizing: border-box;
+	margin-left: -100%;/*跑出父元素框后会自动浮动到左上角*/
+	width: 200px;
+	padding: 20px;
+}
+
+.left img {
+	width: 80px;
+	height: 80px;
+}
+
+.left span {
+	vertical-align: top;/*与顶端对齐*/
+}
+
+.right {
+	float: left;
+
+	position: relative;
+	right: -140px;
+
+	box-sizing: border-box;
+	margin-left: -120px;
+	width: 120px;
+}
+
+.right figure {
+	margin: 20px;
+	text-align: center;/*没有作用于文本而使得图像居中对齐*/
+}
+
+.right figure img {
+	width: 80px;
+	height: 80px;
+}
+
+/*footer*/
+footer {
+	width: 100%;
+	height: 50px;
+
+	font-size: 14px;
+	text-align: center;
+	line-height: 50px;
+
+	color: white;
+	background-color: black;
+}
+
+/*用的圣杯布局
+参考：http://ife.baidu.com/note/detail/id/1025
+http://www.cnblogs.com/imwtr/p/4441741.html
+https://segmentfault.com/a/1190000004524159 具体的实现逻辑。评论中讲到了float的用处。同理可得，不过该代码用了2个负margin。
+*/
