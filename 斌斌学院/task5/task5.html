@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>task2-5</title>
+    <style type="text/css">
+        #container {
+            display: -webkit-flex; /* for webkit */
+            display: flex; /*多栏多列布局*/
+            align-items: flex-end;/*弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界*/
+
+            width: 500px;
+            height: 150px;
+        }
+
+        #container div {
+            display: inline-block;
+
+            margin: 2px 0;
+            margin-right: 10px;
+            padding: 0 15px;
+            width: 5px;
+            height: 50px;
+
+            /*line-height: 50px;*/
+            background-color: #f00;/*背景包括了padding*/
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="num-input">
+    <input type="button" value="左侧入">
+    <input type="button" value="右侧入" style="margin-right: 25px">
+    <input type="button" value="左侧出">
+    <input type="button" value="右侧出">
+    <input type="button" value="对当前元素排序">
+    <div id="container">
+        
+    </div>
+    <script type="text/javascript" src="task5.js"></script>
+</body>
+</html>

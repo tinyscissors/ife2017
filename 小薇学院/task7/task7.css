@@ -1,0 +1,1169 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+    width: 100%;
+    min-width: 1280px;/*限制*/
+    font-family: 'Microsoft YaHei';
+}
+
+header {
+	width: 100%;
+	height: 60px;
+	font-size: 0;/*!important 去掉header下inline-block元素之间的空隙.
+				参考http://www.zhangxinxu.com/wordpress/2012/04/inline-block-space-remove-%E5%8E%BB%E9%99%A4%E9%97%B4%E8%B7%9D*/
+}
+
+header .banner-left {
+	display: inline-block;
+	position: relative;
+	left: 7%;
+
+	width: 10%;
+	height: 60px;
+
+	vertical-align: middle;/*垂直居中对齐：放置在父元素的中部。*/
+    line-height: 60px;
+    text-align: center;/*水平居中对齐*/
+
+	background: url(images/icon1.png) no-repeat left;/*背景图片居左*/
+	background-size: 16% 50%;	
+}
+
+header .banner-left h1{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+header nav {
+	display: inline-block;
+	position: relative;
+	left: 40%;
+
+	width: 30%;
+	height: 60px;
+
+	vertical-align: middle;
+}
+
+header nav ul {
+	box-sizing: border-box; /*box-sizing: content-box|border-box|inherit*/
+	/*margin: 0;
+    padding: 0;
+	height: 60px;
+    width: 100%;*/
+
+	line-height: 60px;
+    list-style: none;
+}
+
+header nav ul li {
+	display: inline-block;
+
+	box-sizing: border-box;
+	width: 20%;
+
+	text-align: center;
+	font-size: 14px;
+	color: #534141;
+
+	-webkit-transition:color 0.4s ease-in-out; /*过渡*/
+    -moz-transition:color 0.4s ease-in-out;
+    transition:color 0.4s ease-in-out;
+	cursor: pointer;
+}
+
+header nav ul li:hover{
+    color: #F04C57;
+}
+
+header nav ul .move{
+    position: absolute;
+    border-top: 4px solid #E53C3C;
+    left: 0;
+    top: 55px;
+    
+    -webkit-transition: left 0.4s ease-in-out;
+    -moz-transition: left 0.4s ease-in-out;
+    transition: left 0.4s ease-in-out;
+}
+
+header nav ul li:nth-child(1):hover~.move{  /*L73-87 实现下滑条的移动*/
+    left: 0;
+}
+
+header nav ul li:nth-child(2):hover~.move{
+    left: 20%;
+}
+
+header nav ul li:nth-child(3):hover~.move{
+    left: 40%;
+}
+
+header nav ul li:nth-child(4):hover~.move{
+    left: 60%;
+}
+
+header nav ul li:nth-child(5):hover~.move{
+    left: 80%;
+}
+
+header .banner-right {
+	display: inline-block;
+	position: relative;
+	left: 50%;/*???*/
+
+	height: 60px;
+    width: 7%;
+
+    vertical-align: middle;
+    text-align: center;
+    font-size: 14px;
+    line-height: 60px;
+    color: #E53C3C;
+
+    cursor: pointer;
+    background: url(images/icon2.png) no-repeat left;
+    background-size: 15px 18px;
+}
+
+header .banner-right .move{  /*下滑条的实现 width初始为0*/
+    position: absolute;
+    top: 45px;
+    left: 25%;
+    width: 0;
+    border-top: 2px solid #E53C3C;
+    
+    -webkit-transition:width 0.4s ease-in-out;
+    -moz-transition:width 0.4s ease-in-out;
+    transition:width 0.4s ease-in-out;
+}
+header .banner-right:hover .move{
+    width: 50px;
+}
+
+#section-1 {
+	width: 100%;
+    height: 650px;
+    margin-top: -2px;
+
+    background-image: url(images/pic01.png);
+    background-size: 100% auto;
+}
+
+#section-1 .mes {
+	position: absolute;/*参照元素为最顶级（最初的包含块）,即#section-1*/
+	top: 270px;
+    left: 120px;
+}
+
+#section-1 .mes p{
+    font-size: 22px;
+    color: #fff;
+    margin: 0;
+}
+
+#section-1 .mes p:first-child {
+    font-family: Arial;
+    font-size: 60px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;/*字母间距*/
+}
+
+#section-1 .mes p:last-of-type{  /*指定父元素的最后一个p元素*/
+    margin-bottom: 60px;
+}
+
+#section-1 .mes span {
+	display: inline-block;
+
+	width: 300px;
+    height: 60px;
+
+    line-height: 60px;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+
+    background: #E53C3C;
+    cursor: pointer;
+
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+#section-1 .mes span:hover{
+    background: #E31212;
+    border-radius: 3px;
+}
+
+#section-2 {
+	width: 100%;
+	height: 240px;
+	font-size: 0;
+}
+
+#section-2 .cell {
+	display: inline-block;
+	position: relative;
+	top: 0;
+
+	width: 25%;
+}
+
+#section-2 .cell .img{
+	display: inline-block;
+
+    width: 100%;
+    height: 130px;
+
+    line-height: 130px;
+    text-align: center;
+}
+
+#section-2 .cell .img img{
+    position: relative;
+    top: 30px;
+}
+
+#section-2 .cell .mes{
+	box-sizing: border-box;
+	border-right: 2px solid #534141;
+    width: 100%;
+    height: 50px;
+
+    font-size: 13px;
+    color: #534141;
+    text-align: center;
+    
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+#section-2 .cell:hover .mes{
+    color: #BE4F48;
+}
+
+#section-2 .cell:last-child .mes{
+    border:none;
+}
+
+#section-3 {
+	width: 100%;
+    height: 400px;
+
+    text-align: center;/*居中啊居中*/
+
+    background: #EDEAEA;
+}
+
+#section-3 .img{
+    position: relative;
+    top: 80px;
+}
+
+#section-3 .mes{
+	position: relative;
+    top: 100px;
+
+    font-size: 50px;
+    color: #8F8F8F;
+}
+
+#section-4 {
+	box-sizing: border-box;
+	width: 100%;
+    height: 300px;
+    padding-top: 80px;
+    
+    text-align: center;
+
+	background: url(images/pic02.png);
+    background-size: cover;
+}
+
+#section-4 .mes p{
+    color: #fff;
+    margin: 0;
+}
+
+#section-4 .mes p:first-child{
+    font-size: 22px;
+}
+
+#section-4 .mes p:last-child{
+    font-size: 13px;
+}
+
+#section-4 .mes span{
+    display: inline-block;
+    color: #fff;
+    width: 30px;
+    height: 20px;/*与下方p保持的距离*/
+    margin-top: 10px;
+    border-top: 2px solid #fff;
+    
+    -webkit-transition: width 0.4s ease-in-out;
+    -moz-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#section-4 .mes span:hover{
+    width: 300px;
+}
+
+#section-4 input[type="radio"]{ 
+    position: relative;
+    top: 47px;
+
+	margin: 0 10px;
+    width: 240px;
+    height: 36px;
+    
+    cursor: pointer;
+    opacity: 0; /*不可见，仅供选择*/
+    z-index: 10;  /*设置堆叠顺序*/
+}
+
+#section-4 .options{
+    height: 36px;
+}
+
+#section-4 .options .select{
+	display: inline-block;
+    position: relative;
+
+    width: 240px;/*设置与input一样*/
+    height: 36px;
+    margin: 0 10px;
+    
+    font-size: 14px;
+    line-height: 36px;
+    text-align: left;
+    color: #B3B3B3;
+    
+    box-sizing: border-box;
+    border: 1px solid #C6B3AF;
+    
+    background: url(images/icon8.png) no-repeat 210px 8px,#fff;
+    background-size: 20px;
+}
+
+#section-4 .options .select:last-of-type{
+    visibility: hidden;  /*只看到3个select元素，最后一个隐藏*/
+}
+
+#section-4 .options .select span{
+    margin-left: 10px;
+}
+
+#section-4 .options .select .option{
+	display: none; /*元素不会被显示*/
+	position: absolute;
+	left: -2px;
+    top: 34px;
+
+    width: 240px;
+    
+    color: #333;
+
+    background-color: #E3E3E5;
+    z-index: 10;  /*与input一层*/
+}
+
+#section-4 input[type="radio"]:nth-of-type(1):checked~.options .select,
+#section-4 input[type="radio"]:nth-of-type(2):checked~.options .select,
+#section-4 input[type="radio"]:nth-of-type(3):checked~.options .select {
+    top: -1px;
+}
+
+#section-4 input[type="radio"]:nth-of-type(1):checked~.options .select-1{
+    border: 2px solid #AE7271;
+    border-bottom-width: 0;
+}
+
+#section-4 input[type="radio"]:nth-of-type(1):checked~.options .select-1 .option{
+    display: block; /*元素显示为块级元素*/
+}
+
+#section-4 input[type="radio"]:nth-of-type(2):checked~.options .select-2{
+    border: 2px solid #AE7271;
+    border-bottom-width: 0;
+}
+
+#section-4 input[type="radio"]:nth-of-type(2):checked~.options .select-2 .option{
+    display: block;
+}
+
+#section-4 input[type="radio"]:nth-of-type(3):checked~.options .select-3{
+    border: 2px solid #AE7271;
+    border-bottom-width: 0;
+}
+
+#section-4 input[type="radio"]:nth-of-type(3):checked~.options .select-3 .option{
+    display: block;
+}
+
+#section-4 .options .select .option ul{
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 240px;
+    border: 2px solid #AE7271;
+    border-top-width: 0;
+}
+
+#section-4 .options .select .option ul li{
+    height: 32px;
+    line-height: 32px;
+    text-align: left;
+    padding-left: 40px;
+    list-style: none;
+    cursor: pointer;
+}
+
+#section-4 .options .select .option ul li:hover{
+    background: url(images/icon8.png) no-repeat 10px 8px,#BF4E48;
+    background-size: 20px;
+    color: #fff;
+}
+
+#section-4 input[type="submit"]{
+	display: inline-block;
+	position: relative;
+    top: 36px;
+
+    width: 240px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    margin: 0 10px;
+    border: 0;
+    outline: 0;
+    
+    color: #fff;
+    letter-spacing: 30px;
+    
+    cursor: pointer;
+    background-color: #BE4F48;
+    
+    -webkit-transition: background-color 0.4s ease-in-out;
+    -moz-transition: background-color 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
+}
+
+#section-4 input[type="submit"]:hover{
+    background-color: #E31212;
+    border-radius: 3px;
+}
+
+#section-5{
+    width: 100%;
+    height: 500px;
+
+    text-align: center;/*4个cell都能居中排列*/
+    font-size: 0;
+
+    background-color: #EDEAEA;
+}
+
+#section-5 .cell{
+    display: inline-block;
+    position: relative;
+    top: 50px;
+
+    box-sizing: border-box;
+    width: 20%;
+    height: 400px;
+    /*border: 1px solid red;*/
+}
+
+#section-5 .cell .img{
+	box-sizing: border-box;
+	margin: 0 auto;
+	border: 0.5px solid #ccc;
+	width: 210px;
+    height: 320px;
+    padding: 10px;
+
+    background-color: #fff;
+}
+
+#section-5 .cell .img img{
+    height: 300px;
+    cursor: pointer;
+}
+
+#section-5 .cell .mes{
+	box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+}
+
+#section-5 .cell .mes p:first-child{
+    font-size: 14px;
+    color: #44403F;
+    margin: 0;
+}
+
+#section-5 .cell .mes p:last-child{
+    font-size: 12px;
+    color: #B3AFAC;
+}
+
+#section-5 .cell:nth-child(2)>.mes{ /*所有mes类*/
+    padding-top: 20px;
+}
+
+#section-5 .cell:nth-child(2)>.mes p:first-child{
+    font-size: 24px;
+    text-indent: 30px;
+    letter-spacing: 30px;
+}
+
+#section-5 .cell:nth-child(2)>.mes p:last-child{
+    margin: 5px;
+}
+
+#section-6{
+    width: 100%;
+    height: 560px;
+}
+
+#section-6 .left{
+	float: left;
+    position: relative;
+
+    width: 68%;
+    height: 560px;
+    
+    background: url(images/pic07.png) no-repeat;
+    background-size: cover;
+}
+
+#section-6 .left .mes{
+	position: relative;
+    top: 130px;
+    
+    width: 500px;
+    height: 300px;
+    margin: 0 auto;
+
+    color: #fff;
+    text-align: center;
+}
+
+#section-6 .left .mes p{
+	display: inline-block;
+
+	margin: 0;
+    margin-bottom: 20px;
+    height: 30px;
+    font-size: 30px;
+    
+    line-height: 30px;
+}
+
+#section-6 .left .mes p:nth-child(1){
+    font-size: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 0px;
+}
+
+#section-6 .left .mes p:nth-child(2){
+    font-size: 150px;
+    height: 150px;
+    line-height: 150px;
+}
+
+#section-6 .left::after{ /*在left后插入新内容（空） 这一设置实现了向左的三角形。参考利用CSS3绘制三角形：http://jingyan.baidu.com/article/656db918e79308e381249cf9.html*/
+    content: ''; /*类似于width:0;height:0;*/
+    position: absolute;
+    top: 250px;
+    left: 100%;
+
+    border-width: 30px;
+    border-style: solid;
+    border-color: transparent #fff transparent transparent;
+    margin-left: -60px;
+}
+
+#section-6 .right{
+    height: 560px;
+    margin-left: 68%;
+    text-align: center;
+}
+
+#section-6 .right .wrapper{
+	position: relative;
+    top: 130px;
+
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#section-6 .right .wrapper .mes{  /*一长串代码实现了三个页面切换的效果*/
+    display: none;
+}
+
+#section-6 .right .wrapper .mes-1{
+    display: block;
+}
+
+#section-6 .right .wrapper .mes p{
+    margin: 0;
+}
+
+#section-6 .right .wrapper .mes p:first-child{
+	margin-bottom: 30px;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#section-6 .right .wrapper .mes p:first-child>span{
+    color: #BE4F48;
+}
+
+#section-6 .right .wrapper .mes p:last-child{
+	margin-bottom: 60px;
+
+    text-align: left;
+    line-height: 25px;
+    font-size: 14px;
+    color: #B3AFAC;
+    
+    -webkit-transition: color 0.4s ease-in-out;
+    -moz-transition: color 0.4s ease-in-out;
+    transition: color 0.4s ease-in-out;
+}
+
+#section-6 .right .wrapper .mes p:last-child:hover{
+    color: #33363F;
+}
+
+#section-6 .right .wrapper .button{
+	display: inline-block;
+
+	border: 1px solid #BE4F48;
+    width: 100px;
+    height: 35px;
+
+    font-size: 13px;
+    line-height: 35px;
+    color: #BE4F48;
+
+    background-color: #fff;
+    cursor: pointer;
+    
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+#section-6 .right .wrapper .button:hover{
+    color: #fff;
+    border-radius: 3px;
+    background-color: #BE4F48;
+}
+
+#section-6 .right .wrapper input[type="radio"]{
+	position: relative;
+    top: 320px;
+
+    width: 10px;
+    height: 10px;
+    
+    z-index: 10;  /*较上层，直接可选中*/
+    opacity: 0;  /*完全透明看不见*/
+    cursor: pointer;
+}
+
+#section-6 .right .wrapper .list{  /*下面的三个圆形按钮*/
+	display: inline-block;
+    position: relative;
+    top: 300px;/*与input同位*/
+
+    height: 10px;
+    width: 10px;
+    border: 1px solid #6C5C5C;
+    border-radius: 5px;
+     
+    z-index: 1;  /*较下层*/
+}
+
+#section-6 .right .wrapper .list:first-of-type{
+    background-color: #6C5C5C;
+}
+
+#section-6 .right .wrapper input[type="radio"]:checked~.list{ /*选中时按钮先暂时全部设背景色为白色*/
+    background-color: #fff;
+}
+
+#section-6 .right .wrapper input[type="radio"]:checked~.mes{
+    display: none;
+}
+
+#section-6 .right .wrapper input[type="radio"]:nth-of-type(1):checked~.list:nth-of-type(1){
+    background-color: #6C5C5C;
+}
+
+#section-6 .right .wrapper input[type="radio"]:nth-of-type(1):checked~.mes-1{
+    display: block;
+}
+
+#section-6 .right .wrapper input[type="radio"]:nth-of-type(2):checked~.list:nth-of-type(2){
+    background-color: #6C5C5C;
+}
+
+#section-6 .right .wrapper input[type="radio"]:nth-of-type(2):checked~.mes-2{
+    display: block;
+}
+
+#section-6 .right .wrapper input[type="radio"]:nth-of-type(3):checked~.list:nth-of-type(3){
+    background-color: #6C5C5C;
+}
+
+#section-6 .right .wrapper input[type="radio"]:nth-of-type(3):checked~.mes-3{
+    display: block;
+}
+
+#section-7{
+    width: 100%;
+    height: 520px;
+}
+
+#section-7 .wrapper{
+	float: left;
+
+    width: 68%;
+    height: 520px;
+    
+    font-size: 0;
+}
+
+#section-7 .wrapper .cell{
+    display: inline-block;
+    position: relative;
+
+    width: 50%;
+    height: 520px;
+
+    font-size: 20px;
+    text-align: center;
+}
+
+#section-7 .wrapper .cell:first-child{
+	color: #fff;
+
+    background-color: #E84E4C;
+}
+
+#section-7 .wrapper .cell .mes{
+    position: relative;
+    top: 200px;
+
+    height: 100px;
+}
+
+#section-7 .wrapper .cell .mes p{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#section-7 .wrapper .cell .mes span{/*以span设置了与button间的空隙*/
+	display: inline-block;
+
+    width: 30px;
+    height: 20px;
+    margin: 10px;
+
+    color: #fff;
+    
+    -webkit-transition: width 0.4s ease-in-out;
+    -moz-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#section-7 .wrapper .cell:nth-of-type(1) .mes span{
+    border-top: 2px solid #fff;/*长度与width一致*/
+}
+
+#section-7 .wrapper .cell:nth-of-type(2) .mes span{
+    border-top: 2px solid #ADADAD;
+}
+
+#section-7 .wrapper .cell .mes span:hover{
+    width: 200px;
+}
+
+#section-7 .wrapper .cell .button{
+	display: inline-block;
+	position: relative;
+    top: 220px;
+
+    width: 150px;
+    height: 40px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0;
+
+    line-height: 40px;
+    
+    cursor: pointer;
+    
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+#section-7 .wrapper .cell:first-child .button{
+    border-color: #fff;
+}
+
+#section-7 .wrapper .cell:first-child .button:hover{
+    color: #E84E4C;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+#section-7 .wrapper .cell:last-child .button{
+    border-color: #E84E4C;
+    color: #E84E4C;
+}
+
+#section-7 .wrapper .cell:last-child .button:hover{
+    background-color: #E84E4C;
+    color: #fff;
+    border-radius: 3px;
+}
+
+#section-7 .wrapper .cell:last-child::after{  /*实现向右的三角*/
+    content: '';
+    position: absolute;
+    border-width: 20px;
+    border-color: transparent transparent transparent #fff;
+    border-style: solid;
+    top: 240px;
+    left: 100%;
+}
+
+#section-7 .img{
+    height: 520px;
+    margin-left: 68%;
+    background: url(images/pic08.png) no-repeat;
+    background-size: cover;
+}
+
+#section-8{
+    width: 100%;
+    height: 800px;
+    text-align: center;
+}
+
+#section-8 .top{
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+
+#section-8 .top .mes{
+    position: relative;
+    top: 100px;
+}
+
+#section-8 .top .mes p{
+    margin: 0;
+}
+
+#section-8 .top .mes p:nth-of-type(1){
+    font-size: 18px;
+}
+
+#section-8 .top .mes p:nth-of-type(2){
+    font-size: 14px;
+    color: #B3AFAC;
+}
+
+#section-8 .top .mes span{
+	display: inline-block;
+
+    width: 30px;
+    height: 20px;
+    margin: 10px;
+    border-top: 2px solid #E44F4B;
+
+    color: #fff;
+    
+    -webkit-transition: width 0.4s ease-in-out;
+    -moz-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#section-8 .top .mes span:hover{
+    width: 200px;
+}
+
+#section-8 .left{
+	position: relative;
+	top: -60px;
+	display: inline-block;
+
+    width: 30%;
+    height: 400px;
+    
+    font-size: 0;
+    text-align: left;
+}
+
+#section-8 .left .mes{
+    width: 350px;
+    height: 130px;
+    margin: 0 auto;
+}
+
+#section-8 .left .mes span{
+	float: right;
+
+    font-size: 14px;
+    color: #B3AFAC;
+    
+    cursor: pointer;
+}
+
+#section-8 .left .mes p:nth-of-type(1){
+	margin-bottom: 25px;
+    font-size: 16px;
+    color: #6C5C5C;
+    font-weight: bold;
+}
+
+#section-8 .left .mes p:nth-of-type(2){
+    font-size: 14px;
+    line-height: 20px;
+    color: #B3AFAC;
+}
+
+#section-8 .right{
+	display: inline-block;
+
+    width: 700px;
+    height: 400px;
+    
+    font-size: 20px;
+    text-align: left;
+    font-size: 0;
+}
+
+#section-8 .right input[type="text"]:focus,
+#section-8 .right textarea:focus{ /*：focus*/
+    border: 1px solid #E3E3E3;
+    background-color: #fff;
+}
+
+#section-8 .right input[type="text"]{
+	box-sizing: border-box;
+    height: 40px;
+    width: 300px;
+	margin: 15px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+
+    font-size: 14px;
+    color: #4E3A4F;
+    
+    background-color: #E3E3E3;
+}
+
+#section-8 .right textarea{
+	box-sizing: border-box;
+    width: 620px;
+    height: 160px;
+    margin: 10px;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+
+    font-size: 14px;
+    color: #4E3A4F;
+
+    background-color: #E3E3E3;
+    resize:none;
+}
+
+#section-8 .right input[type="submit"]{
+	box-sizing: border-box;
+    margin: 10px;
+    border: 0;
+    outline: 0;
+    width: 620px;
+    height: 40px;
+
+    font-size: 14px;
+    color: #4E3A4F;
+    text-align: center;
+    
+    background-color: #E3E3E3;
+    
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+#section-8 .right input[type="submit"]:hover{
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #B3AFAC,-1px -1px 1px #B3AFAC;
+}
+
+#section-9{
+    width: 100%;
+    height: 400px;
+
+    text-align: center;
+
+    background-color: #33363F;
+}
+
+#section-9 .mes{
+	display: inline-block;
+
+	margin-top: 80px;
+    width: 100%;
+    height: 150px;
+
+    color: #F7F8FC;
+}
+
+#section-9 .mes p:first-child{
+    font-size: 20px;
+}
+
+#section-9 .mes p:last-child{
+    font-size: 14px;
+}
+
+#section-9 .text{
+	display: inline-block;
+
+    width: 100%;
+    height: 40px;
+    
+    font-size: 0;
+}
+
+#section-9 .text input[type="email"]{
+    width: 500px;
+    height: 40px;
+    font-size: 15px;
+    box-sizing: border-box;
+    padding-left: 10px;
+
+    color: #75757F;
+}
+
+#section-9 .text input[type="email"]:focus{
+    outline: 0;
+}
+
+#section-9 .text input[type="submit"]{
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 5px;
+    border: 0;
+    box-sizing: border-box;
+    background-color: #75757F;
+    
+    -webkit-transition: background-color 0.4s ease-in-out;
+    -moz-transition: background-color 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
+}
+
+#section-9 .text input[type="submit"]:hover{
+    background-color: #5E5E68;
+}
+
+#section-9 .icon{
+	display: inline-block;
+    position: relative;
+    top: 30px;
+
+    width: 100%;
+    height: 50px;
+
+    color: #fff;
+    font-size: 30px;
+}
+
+#section-9 .icon i{
+    display: inline-block;
+
+    width: 50px;
+    height: 50px;
+    margin: 0;
+
+    line-height: 50px;
+    vertical-align: middle;
+    
+    cursor: pointer;
+    
+    -webkit-transition: font-size 0.4s ease-in-out;
+    -moz-transition: font-size 0.4s ease-in-out;
+    transition: font-size 0.4s ease-in-out;
+}
+
+footer{
+    width: 100%;
+    height: 60px;
+
+    text-align: center;
+
+    background-color: #30303A;
+}
+
+footer .mes,
+footer .back {
+    width: 300px;
+    height: 60px;
+
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+}
+
+footer .mes{
+    float: left;
+}
+
+footer .mes span{
+    cursor: pointer;
+}
+
+footer .back{
+    float: right;
+}
+
+footer .back a{
+    text-decoration: none;
+    color: #fff;
+    
+    -webkit-transition: color 0.4s ease-in-out;
+    -moz-transition: color 0.4s ease-in-out;
+    transition: color 0.4s ease-in-out;
+}
+
+footer .back a:hover{
+    color: #75757F;
+}
+
+/*section4的下拉框显示是难点*/

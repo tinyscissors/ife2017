@@ -1,0 +1,71 @@
+* {
+	margin: 0;
+	padding: 20px;/**/
+}
+
+.flex,
+.flex > div {
+	box-sizing: border-box;
+}
+
+.flex {/**/
+	border: 1px solid gray;
+	display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;/*伸缩项目会平均地分布在行里.第一个伸缩项目一行中的
+    							     最开始位置,最后一个伸缩项目在一行中最终点位置。*/
+
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;/*伸缩项目的外边距盒在该行的侧轴上居中放置。*/
+
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;/*flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]*/
+}
+
+.flex > div {
+    width: 150px;
+    border: 1px solid #f00;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.flex_item1 {
+	height: 120px;
+}
+
+.flex_item2 {
+    height: 100px;
+}
+
+.flex_item3 {
+    height: 40px;
+}
+
+.flex_item4 {
+    height: 200px;
+    border: 1px solid blue !important;/*突出了优先级*/
+}
+
+@media all and (max-width: 640px) {/**/
+    .flex_item4 {/*设置弹性盒对象元素的顺序*/
+        -webkit-order: -1;
+            -ms-flex-order: -1;
+                order: -1;
+    }
+
+    .flex {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;/*定义伸缩容器里多行显示*/
+        -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+                align-items: flex-start;/*伸缩项目在侧轴起点边的外边距
+                						紧靠住该行在侧轴起始的边。*/
+    }
+}

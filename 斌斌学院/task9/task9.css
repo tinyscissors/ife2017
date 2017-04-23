@@ -1,0 +1,33 @@
+/* {
+	margin: 0;
+	padding: 0;
+}*/
+
+section {
+	display: flex;
+	flex-flow: wrap;/*	规定灵活的项目在必要的时候拆行或拆列。*/
+}
+
+fieldset {
+	width: 300px;
+}
+
+div {
+	display: flex;
+	border: solid 2px black;
+	margin: 5px;
+	padding: 5px;
+	background-color: white;
+}
+
+.traversal {
+	background-color: #8DB5FF;
+}
+
+#found {
+	background-color: #00FF00;
+}
+
+#focus {
+	background-color: #FFF25B;
+}

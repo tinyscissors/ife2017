@@ -1,0 +1,44 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*绝对定位元素需要至少一个祖先元素设置了相对定位（绝对定位），
+不然元素定位会相对于页面的主体进行定位。此处即是相对于body定位。
+*/
+.main {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	margin-top: -100px;
+	margin-left: -200px;
+	width: 400px;
+	height: 200px;
+
+	background-color: #ccc;
+}
+
+.left-top-area {
+	position: absolute;
+
+	border-radius: 0 0 50px 0;
+	width: 50px;
+	height: 50px;
+
+	background-color: #fc0;
+}
+
+.right-bottom-area {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+
+	border-radius: 50px 0 0 0;
+	width: 50px;
+	height: 50px;
+
+	background-color: #fc0; 	
+}
+
+/*参考http://ife.baidu.com/note/detail/id/1085*/

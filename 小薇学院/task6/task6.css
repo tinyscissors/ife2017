@@ -1,0 +1,474 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "微软雅黑";
+	background-color: #ccc;/*底面灰*/
+}
+
+.main {
+	width: 980px;
+	height: 1386px;
+	margin: 0 auto;/*水平居中*/
+	background-color: #fff;/*白*/
+}
+
+.top {/*inline-block的top_bg+span(top_time)组合*/
+	margin: 0 auto;
+	border-bottom: 2px solid #938e8c;
+	width: 892px;
+	height: 61px;
+
+	font-family: "黑体";
+	font-size: 12px;
+}
+
+.top_bg {
+	display: inline-block;/*加上后.top_time会妥帖，否则会跑到下一行*/
+	width: 110px;
+	height: 61px;
+	background-color: #d45d5c;
+}
+
+.top_bg span {
+	float: left;/*浮动元素会生成一个块级框(display:block)*/
+	margin-top: 45px;
+	margin-left: 4px;
+	color: #fff;
+}
+
+.top_time {
+	float: right;
+	margin-top: 45px;
+	color: #d45d5c;
+}
+
+.middle {
+	margin: 44px;
+}
+
+.middle_left {
+	position: relative;
+	float: left;
+}
+
+.middle_right {
+	position: relative;
+	float: right;
+
+	width: 203px;
+	height: 300px;
+}
+
+.middle_right hr { /*横杠*/
+	height: 2px;
+
+	background-color: #cc8091;
+}
+
+.About {
+	font-size: 24px;
+	font-family: "微软雅黑";
+	line-height: 40px;
+	color: #000;
+	text-decoration: underline;/*下划线*/
+	font-variant: small-caps;/*所有的小写字母均会被转换为大写。即小型大写字母*/
+	text-transform: capitalize;/*文本中的每个单词以大写字母开头。*/
+}
+
+.detail {
+	font-family: "楷体";
+	font-size: 12px;
+	color: #676767;
+	line-height: 10px;
+	font-style: oblique;/*倾斜字体*/
+}
+
+.seven {
+	margin-left: -18px;/*向左移了一点*/
+
+	font-family: "微软雅黑";
+	font-size: 116px;
+	color: #75b86b;
+	font-style: oblique;/*倾斜字体*/
+}
+
+.num {
+	position: absolute;/*相对于middle_right*/
+	bottom: -10px;
+	left: 0;
+	font-size: 55px;
+	color: #cc8091;
+	font-family: "微软雅黑";
+}
+
+.text_1 {
+	position: absolute;/*相对于middle_right*/
+	bottom: 10px;
+	left: 85px;
+	font-size: 21px;
+	color: #cc8091;
+	font-family: "微软雅黑";
+}
+
+.text_2 {
+	position: absolute;/*相对于middle_right*/
+	bottom: 0;
+	left: 85px;
+	font-size: 12px;
+	color: #ccc;
+	font-family: "微软雅黑";
+}
+
+.cover_left {
+	position: absolute;/*相对于middle_left*/
+	top: 0;
+	left: 0;
+
+	width: 191px;
+	height: 301px;
+
+	background: green;
+	opacity: 0.2;/*遮罩的透明度*/
+}
+
+.cover_right {
+	position: absolute;/*相对于middle_left*/
+	top: 0;
+	right: 0;
+
+	width: 191px;
+	height: 301px;
+
+	background: red;
+	opacity: 0.2;
+}
+
+.middle_text {/*布局利用float:left*/
+	float: left;
+	overflow: auto;/*如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。*/
+
+	margin: 44px;
+	width: 888px;/**/
+}
+
+.what {
+	cursor: pointer;
+	height: 28px;
+	font-size: 16px;
+	color: #418c59;
+	font-family: "微软雅黑";
+	font-weight: bold;/*加粗*/
+	text-decoration: underline;
+}
+
+.when {
+	cursor: pointer;
+	height: 28px;
+	font-size: 16px;
+	color: #d2994f;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.how {
+	cursor: pointer;
+	height: 28px;
+	font-size: 16px;
+	color: #d2994f;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.le {
+	float: left;
+	width: 230px;
+	margin-right: 20px;/**/
+}
+
+.le p {
+	font-size: 12px;
+	color: #767777;
+    line-height: 16px;
+    font-family: "宋体";
+}
+
+.mi {
+	float: left;
+	margin-right: 20px;/**/
+	width: 210px;
+
+}
+
+.mi p {
+    font-size: 12px;
+    color: #231815;
+    line-height: 16px;
+    font-family: "微软雅黑";
+    opacity: 0.7;
+}
+
+.ri {
+	float: left;
+	margin-right: 20px;
+    width: 140px;
+}
+
+.ri p {
+	margin-bottom: 50px;/**/
+    font-size: 12px;
+    color: #231815;
+    line-height: 16px;
+    font-family: "微软雅黑";
+}
+
+ul {
+    list-style: none;/**/
+    font-size: 12px;
+    color: #231815;
+    line-height: 16px;
+    font-family: "微软雅黑";
+}
+
+li {
+    margin-bottom: 5px;/**/
+}
+
+.ri ul li span {
+    font-size: 12px;
+    color: #cd4a48;
+    font-style: oblique;
+    line-height: 16px;
+    opacity: 0.7;
+}
+
+.bottom {
+	float: left;/**/
+	/*overflow: auto;*/
+	width: 892px;
+	margin: 0 44px;
+}
+
+.left {
+    float: left;
+    width: 415px;
+}
+
+.left_up {
+	border-bottom: 2px solid #11456b;
+    width: 415px;
+}
+
+.left_up .the {
+	font-size: 72px;
+	color: #f5e327;
+    font-family: "黑体";
+    font-weight: bold;
+	font-style: oblique;
+}
+
+.left_up p {
+    font-size: 42px;
+	line-height: 50px;
+	font-family: "黑体";
+	color: #11456b;
+	font-weight: bold;
+}
+
+.left_bottom {
+	position: relative;
+    padding: 10px 0;
+	margin-top: 20px;
+}
+
+.left_bottom p {
+    font-size: 12px;
+	color:#767777;
+	font-family: "宋体";
+	line-height: 16px;
+    text-indent: 2em;
+}
+
+.le_text p:first-letter {/*用于选取指定选择器的首字母*/
+    float: left;/**/
+    font-size: 70px;
+	color: #f5e327;
+	font-family: "微软雅黑";
+	line-height: 70px;
+}
+
+.le_text p {
+    clear: both; /*p的左侧和右侧均不允许出现浮动元素*/
+    text-indent: 0;
+}
+
+.pic_2 {
+    float: right;/**/
+	margin: 12px 0px;
+}
+
+.right {
+    float: right;
+    width: 458px;
+    height: 637px;
+}
+
+.rim {
+	position: relative;
+
+	width: 458px;
+    height: 275px;
+}
+
+.rim_text {
+	position: absolute;
+	bottom: 18px;/**/
+
+    width: 458px;
+    height: 61px;
+
+    background: #000;
+    opacity: 0.6;
+}
+
+.rim_text p {
+	margin-left: 50px;
+	margin-top: 10px;
+    border-left: 3px solid #72b16a;
+    height: 44px;
+
+    font-size: 26px;
+    font-family: "微软雅黑";
+    line-height: 44px;
+    text-indent: 0.5em;
+
+    color: #fff;
+}
+
+.rim_text p span {
+	margin-left: 5px;
+    font-size: 12px;
+    color: #72b16a;
+    font-family: "微软雅黑";
+    font-style: oblique;
+    line-height: 140%;
+}
+
+.r_text {
+	position: relative;
+	margin-top: 18px;
+    width: 458px;
+    height: 318px;
+    background: #eeeed6;
+}
+
+.r_text_1 ul {
+    list-style-image: url("images/triangle.png");/*用图像装饰li*/
+}
+
+.r_text_1 ul li {
+	margin-left: 50px;
+    padding-top: 20px;
+    font-size: 16px;
+    color: #5a5b5b;
+    font-family: "宋体";
+    text-align: left;/*左对齐*/
+}
+
+.sp {
+    font-size: 12px;
+    font-family: "宋体";
+    font-style: oblique;
+    text-align: right;
+    line-height: 20px;
+    color: #5a5b5b;
+}
+
+.r_text_2 {
+	position: absolute;/*相对于r_text*/
+	bottom: 0;
+    left: 0;
+    width: 260px;
+    height: 160px;
+    color: #fff;
+    background: #d55d5c;
+}
+
+.zero {
+    float: left;/*浮动布局*/
+    border-right: 2px solid #fff;
+    height: 86px;
+    margin: 37px 10px;
+    font-size: 110px;
+    color: #fff;
+    font-family: "微软雅黑";
+    line-height: 86px;
+}
+
+.nums {
+    margin-top: 37px;
+    font-size: 21px;
+    font-family: "黑体";
+    font-style: oblique;
+    line-height: 24px;
+}
+
+.hello {
+    font-size: 12px;
+    font-family: "黑体";
+    line-height: 10px;
+}
+
+.r_text_3 {
+	position: absolute;/*相对于r_text*/
+	right: 0;
+    bottom: 0;
+    width: 178px;
+    height: 160px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #5a5b5b;
+    font-family: "黑体";
+    font-style: oblique;
+    line-height: 16px;
+    text-indent: 3em;
+}
+
+.r_text_3 span {
+    font-size: 72px;
+    color: #d45d5c;
+    font-family: "黑体";
+    line-height: 30px;
+}
+
+.pu_left {
+    position: absolute;
+    bottom: 120px;
+    right: 150px;
+    font-style: normal;
+}
+
+.pu_right {
+    position: absolute;
+    bottom: 45px;
+    right: 0;
+    font-style: normal;
+}
+
+footer{
+    clear: both;/*左侧和右侧均不允许出现浮动元素*/
+    margin: 0 auto;
+    width: 892px;
+    height: 59px;
+    border-top: 1px solid #938e8c;
+}
+
+footer p{
+    float: right;
+    font: 12px "黑体";
+    color: #d45d5c;
+}
