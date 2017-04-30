@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>task3-3</title>
+		<link rel="stylesheet" type="text/css" href="task3.css">
+	</head>
+	<body>
+		<div id="form-container">
+			<div id="radio-select" onchange="radioChange()"> 
+			<!--onchange事件作用于<input>, <select>, <textarea>。但这里用在div上居然可以-->
+	            <div class="radio">
+	                <label>
+	                    <input type="radio" name="optionsRadios" id="inSchoolRadio" checked> 在校生
+	                </label>
+	            </div>
+	            <div class="radio">
+	                <label>
+	                    <input type="radio" name="optionsRadios" id="outschoolRadio"> 非在校生
+	                </label>
+	            </div>
+	        </div>
+	        <div id="select-container">
+	            <div class="inSchool">
+	                <span>学校</span>
+	                <select class="select" id="select1" onchange="selectDistrict()">
+	                    <option value="bj">北京</option>
+	                    <option value="sh">上海</option>
+	                    <option value="hz">杭州</option>
+	                </select>
+	                <select class="select" id="select2">
+	                    <option value="pku">北京大学</option>
+	                    <option value="thu">清华大学</option>
+	                    <option value="bhu">北京航空航天大学</option>
+	                </select>
+	            </div>
+	            <div class="outSchool hide">
+	                <span>就业单位</span>
+	                <input type="text" class="input">    
+	            </div>
+	        </div>    
+		</div>
+		<script type="text/javascript" src="task3.js"></script>
+	</body>
+</html>

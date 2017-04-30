@@ -1,0 +1,94 @@
+#container {
+	position: absolute;
+
+	margin-left: 100px;/*如果定义margin:auto整个container会靠左*/
+	/*padding: 100px;*/
+	width: 400px;
+	height: 400px;
+}
+
+ol {
+	list-style: none;
+}
+
+.row-container {
+	margin: 0;
+	padding: 0;
+	width: 400px;
+	height: 40px;
+
+	line-height: 40px;
+	letter-spacing: -0.5em;/*li间的距离。若不加因间距太大10会跑到外面*/
+}
+
+.row-container li {
+	display: inline-block;
+
+	width: 40px;
+	/*height: 10px;*/
+
+	letter-spacing: 0;/*li元素内字符的间距。保证10不会纠结在一起。*/
+	text-align: center;
+}
+
+.col-container {
+	margin: 0;
+	padding: 0;
+	width: 400px;
+	height: 400px;
+	border: 1px black solid;
+}
+
+.col-container li {
+	display: flex;/*均分了10行*/
+	flex-flow: row wrap;/*在必要的时候拆行*/
+	position: relative;
+
+	box-sizing: border-box;
+	width: 400px;
+	height: 40px;
+
+	line-height: 40px;
+
+	background-color: #fff;
+
+	counter-increment: testname;/*计数器*/
+}
+
+.col-container li::before {
+	position: absolute;
+	left: -40px;
+
+	width: 40px;
+	content: counter(testname);
+
+	text-align: center;
+}
+
+.col-container li div {
+	box-sizing: border-box;
+	width: 40px;
+	height: 100%;
+
+	background-color: #fff;
+
+	outline: 1px black solid;/*outline比border要轻一点*/
+}
+
+.col-container #car {
+    position: absolute;
+
+    width: 41px;
+    height: 41px;
+    border-top: 10px solid blue;
+    box-sizing: border-box;
+
+    background-color: red;
+
+    transition: all .5s;
+    z-index: 10;/*置于较顶层*/
+}
+            
+#commandInput {
+    margin: 10px 0;
+}

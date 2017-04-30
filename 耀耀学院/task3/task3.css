@@ -1,0 +1,62 @@
+body {
+    font-size: 25px;
+    font-family: 'Microsoft yahei';
+}
+
+#form-container {
+    width: 700px;
+    padding: 100px;
+    margin: auto;
+}
+
+.radio {
+    display: inline-block;
+    margin-left: 100px;
+}
+
+#form-container span {
+    float: left;
+    width: auto;
+    height: 50px;
+    padding: 0 20px;
+    margin-left: 25px;
+}
+
+input {
+    border: 2px solid #a8a8a8;
+    border-radius: 5px;
+
+    font-size: 25px;
+
+    outline: none;
+}
+
+#select-container {
+    padding: 20px 0;
+}
+
+.hide{
+    display: none;
+}
+
+.select {
+    margin-left: 30px;
+    width: 160px;
+    height: 34px;
+    padding: 6px 12px;
+    
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}

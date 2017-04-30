@@ -1,0 +1,81 @@
+body {
+    font-size: 25px;
+    font-family: 'Microsoft yahei';
+}
+
+#form-container {
+    margin: auto;
+    width: 700px;
+    padding: 100px;
+}
+
+#form-container ul {
+    list-style: none;
+}
+
+#form-container li {
+    margin: 20px 0;
+}
+
+#form-container span {
+    float: left;
+    width: 100px;
+    height: 50px;
+    padding-right: 10px;
+}
+
+#form-container input {
+    border: 2px solid #a8a8a8;
+    border-radius: 5px;
+    width: 500px;
+    height: 50px;
+
+    font-size: 25px;
+    outline: none;
+}
+
+#form-container .inputFocus {
+    border: 2px solid #1569C7;
+}
+
+#form-container .correctInput {
+    border: 2px solid #00FF00;
+}
+
+#form-container .wrongInput {
+    border: 2px solid #F70D1A;
+}
+
+#form-container button {
+    display: inline-block;
+
+    width: 80px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 20px 300px;
+
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+
+    background: #2f79ba;
+}
+
+.status {
+    display: none;
+
+    margin: 0 105px;
+    color: #B6B6B4;
+    transition: all 0.3s ease-in-out;/**/
+}
+
+.correctSta {
+    color: #00FF00;
+}
+            
+.wrongSta {
+    color: #F70D1A;
+}
